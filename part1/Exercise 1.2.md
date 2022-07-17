@@ -1,6 +1,6 @@
 ```console
-toppari@Toppari-PC:~$ docker ps -a
+$ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-toppari@Toppari-PC:~$ docker images
+$ docker images
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```

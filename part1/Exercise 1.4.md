@@ -9,7 +9,7 @@ After installing curl inside the container, switch back to **Terminal 1** to com
 ## Terminal 1
 
 ```console
-toppari@Toppari-PC:~$ docker container run --name missing -it ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+$ docker container run --name missing -it ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 Input website:
 helsinki.fi
 Searching..
@@ -25,7 +25,7 @@ Searching..
 ## Terminal 2
 
 ```console
-toppari@Toppari-PC:~$ docker exec -it missing bash
+$ docker exec -it missing bash
 root@88b554680cf0:/# apt update
 root@88b554680cf0:/# apt install curl
 ```
