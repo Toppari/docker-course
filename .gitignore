@@ -1,0 +1,5 @@
+# To not push files which were not requested to submitted with the exercise, but were needed to succeed with the exercise / running e.g container.
+nginx.conf
+database
+redis-data
+TODOS.md

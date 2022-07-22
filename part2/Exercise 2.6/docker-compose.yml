@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  postgres_service:
+    image: postgres:13.2-alpine
+    environment:
+      - POSTGRES_PASSWORD=example_pass
+    container_name: postgres
+
+  redis_service:
+    image: redis
+    container_name: redis
+
+  backend_service:
+    image: example-backend
+    ports:
+      - 8080:8080
+    environment:
+      - REDIS_HOST=redis_service
+      - POSTGRES_HOST=postgres_service
+      - POSTGRES_PASSWORD=example_pass
+    container_name: backend
+
+  frontend_service:
+    image: example-frontend
+    ports:
+      - 5000:5000
+    container_name: frontend
